@@ -1,0 +1,373 @@
+/* start body css */
+body {
+  position: relative;
+  height: 100%;
+}
+/* end body */
+/* start all element style with css */
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Open Sans",sans-serif;
+}
+/* end all element style with css */
+/* start header */
+header{
+  height: 90px;
+  width: 100%;
+  background: #2f3640;  
+  position: fixed;
+  z-index: 3;    
+}
+
+.inner-width{
+  max-width: 1000px;
+  padding: 0 10px;
+  margin: auto;
+}
+
+.logo{
+  float: left;
+  padding: 20px 0;
+}
+
+.logo img{
+  height: 50px;
+}
+
+.navigation-menu{
+  float: right;
+  display: flex;
+  align-items: center;
+  min-height: 90px;
+}
+
+.navigation-menu a{
+  margin-left: 10px;
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: .3s linear;
+}
+
+.navigation-menu a:hover{
+  background: #fff;
+  color: #2f3640;
+  transform: scale(1.1);
+}
+
+.navigation-menu i{
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.home{
+  color: #ff6b6b;
+}
+
+.about{
+  color: #0abde3;
+}
+
+.works{
+  color: #feca57;
+}
+
+.tim{
+  color: #5f27cd;
+}
+
+.kontak{
+  color: #1dd1a1;
+}
+
+.menu-toggle-btn{
+  float: right;
+  height: 90px;
+  line-height: 90px !important;
+  color: #fff;
+  font-size: 26px;
+  display: none !important;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width:700px) {
+  .menu-toggle-btn{
+    display: block !important;
+  }
+
+  .navigation-menu{
+    position: fixed;
+    width: 100%;
+    max-width: 400px;
+    background: #172b4d;
+    top: 90px;
+    right: 0;
+    display: none;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+
+  .navigation-menu::before{
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #172b4d;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+  }
+
+  .navigation-menu a{
+    display: block;
+    margin: 10px 0;
+  }
+
+  .navigation-menu.active{
+    display: block;
+  }
+}
+/* end header */
+
+/* Start Slideshow */
+.slidershow{
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;   
+}
+.middle{
+  position: relative;    
+  left: 50%;
+  transform: translate(-50%,-50%);
+  top: 330px;    
+}
+.navigation{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  padding-bottom:20px ;  
+}
+.bar{
+  width: 50px;
+  height: 10px;
+  border: 2px solid #fff;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.bar:hover{
+  background: #fff;
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slide{
+  width: 20%;
+  transition: 0.6s;
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+}
+
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+#r4:checked ~ .s1{
+  margin-left: -60%;
+}
+#r5:checked ~ .s1{
+  margin-left: -80%;
+}
+/* end slideshow */
+/* sub-info */
+.join {
+  position: relative;
+  top: 80px;
+  padding: 10px;
+  background-color: #fae;  
+}
+.join h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+/* info */
+#about {  
+  display: flex;
+  justify-content: center;   
+  position: relative;
+  top: 80px;  
+  padding:30px 0;
+  background-color: #faeeed;  
+}
+#about h2 {
+  text-align: center;  
+}
+#about p {
+  text-align: center;  
+}
+.info {  
+  padding:25px;  
+}
+.icon{
+  text-align: center;
+  font-size: 50px;
+}
+/* start sub content paralax */
+#sub-contents {
+  height: 100%;
+  background-color: #0abde3;
+  position: relative;
+  top: 80px;
+}
+#sub-contents h2 {
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+  color: #fff;
+}
+#sub-contents p {
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+  color: #fff;
+}
+.paralax{
+  background-image: url('../img/4.jpg');
+  height: 500px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* start team section */
+#team{    
+  padding: 5px 5px 5px 35px;   
+  position: relative; 
+  top: 80px;  
+  height: auto;
+  
+}
+#team h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;    
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 230px;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  float: left;
+  background-color: #85a392;
+  position: relative;
+  top: 10px;
+  left: 10px;  
+}
+
+.title {
+  color: #f5b971;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+/* end team section */
+
+/* start form section */
+#contact {
+  background-color: #1dd1a1;
+  position: relative;
+  top: 90px;
+  clear: left;
+  padding: 50px;
+}
+#contact h1 {
+  padding: 10px;
+  text-align: center;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */  
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+/* end form section */
+/* start footer */
+footer img {
+  width: 125px;
+}
+
+footer p {
+  color: #b3aeb5;
+  font-size: 12px;
+}
+
+footer {
+  padding-top: 30px;
+}
